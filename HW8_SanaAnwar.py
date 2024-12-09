@@ -1,4 +1,23 @@
-# PROBLEM 1
+# Sana Anwar
+# CS 100 H FALL 2023
+# Homework 8 - Dictionaries
+
+"""
+Problem 1: Write a function named initialLetterCount that takes one parameter, wordList — a list of words. 
+Create and return a dictionary in which each initial letter of a word in wordList is a key and the corresponding value is the number 
+of words in wordList that begin with that letter. The keys in the dictionary should be case-sensitive, which means 'a' and 'A' are two different keys.
+
+Problem 2: Write a function named initialLetters that takes one parameter, wordList – a list of words. 
+Create and return a dictionary in which each initial letter of a word in wordList is a key and the corresponding value is a list of the 
+words in wordList that begin with that letter. There should be no duplicate words in any value in the dictionary.
+
+
+Problem 3: Write a function named shareOneLetter that takes one parameter, wordList – a list of words. 
+Create and return a dictionary in which each word in wordList is a key and the corresponding value is a list of all the words
+in wordList that share at least one letter with that word. There should be no duplicate words in any value in the dictionary.
+"""
+
+# Problem 1
 def initialLetterCount(wordList):
     count_dict = {}
     for word in wordList:
@@ -6,7 +25,7 @@ def initialLetterCount(wordList):
         count_dict[initial] = count_dict.get(initial, 0) + 1
     return count_dict
 
-# PROBLEM 2
+# Problem 2
 def initialLetters(wordList):
     letter_dict = {}
     for word in wordList:
@@ -18,7 +37,7 @@ def initialLetters(wordList):
     return letter_dict
 
 
-# PROBLEM 3
+# Problem 3
 def shareOneLetter(wordList):
     share_dict = {}
     for word in wordList:

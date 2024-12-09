@@ -1,6 +1,6 @@
-'''
-PROBLEM 0. Put your name and assignment information here.
-'''
+# Sana Anwar
+# CS 100 H FALL 2023
+# Homework 5 - String Methods
 
 # The Bells
 # Edgar Allen Poe
@@ -196,35 +196,65 @@ def litCricFriend(wordList, text):
     occurrence is the whole word, regardless of case, and
     excluding punctuation.'''
 
-    # PROBLEM 1. converting all the text to lowercase
+    # Problem 1: Write a string method call that lower cases all
+    # of the characters in text. One line of code. Hint: assign the
+    # lower-cased text to a new variable name.
+
     text_lower = text.lower()
 
-    # PROBLEM 2. replacing the m-dashes with spaces
+    # Problem 2: Write a string method call that replaces every
+    # m-dash ('--') in the lower-cased text with a space (' '). 
+    # One line of code.
+
     text_no_mdash = text_lower.replace('--', ' ')
 
-    # PROBLEM 3. splitting the text into a list of words
+    # Problem 3: Write a string method call that splits text into a
+    # list of words (after they have been lower-cased, and the
+    # m-dashes removed). One line of code.
+
     words = text_no_mdash.split()
 
-    # PROBLEM 4. getting rid of the punctuation
+    # Problem 4: Write a loop that creates a new word list, using a
+    # string method to strip the words from the list created in Problem 3
+    # of all leading and trailing punctuation. Hint: the string library,
+    # which is imported above, contains a constant named punctuation.
+    # Three lines of code.
+
     clean_words = [word.strip(string.punctuation) for word in words]
 
-    # PROBLEM 5. count how many occurrences of words in wordList
+    # Problem 5: Write a loop that sums the number of times that the
+    # words in wordList occur in the list from Problem 4. Hint 1: you
+    # can use a list method to do the counting. Hint 2: lower case the
+    # words in wordList. Between three and five lines of code. (It
+    # depends on your coding style -- various styles are OK.)
+
     count = sum(clean_words.count(word.lower()) for word in wordList)
 
-    # PROBLEM 6. calculate the frequency of how often those words show
+    # Problem 6: Calculate the ratio of the number from Problem 5
+    # to the number of words in text. Return this ratio. Between one
+    # and three lines of code. (It depends on your coding style --
+    # various styles are OK.)
+
     frequency = count / len(clean_words)
     return frequency
 
-# PROBLEM 7. calculate and print the frequencies for these specific words
+# Problem 7: Call litCricFriend() four times to find the frequency
+# of the indefinite articles 'a' and 'an' and the definite article
+# 'the' in the two poems above. Print out the value returned by
+# each function call, identifying what it is.
+
 print("bellsAAnFrequency:", litCricFriend(['a', 'an'], theBells))
 print("bellsTheFrequency:", litCricFriend(['the'], theBells))
 print("cantoAAnFrequency:", litCricFriend(['a', 'an'], cantoXII))
 print("cantoTheFrequency:", litCricFriend(['the'], cantoXII))
 
+# Problem 8: Do the results show that Poe and Neruda use 'a' and 'an'
+# differently? Do the results show that Poe and Neruda use 'the'
+# differently?
+
 '''
-PROBLEM 8:
 the results likely show different patterns in how Poe and Neruda use "a/an" and "the." 
 poe's poem has a rhythmic, repetitive style that might increase the use of "the" to add to its musical flow.
-in contrast, Neruda’s poem is more narrative and reflective, so he may use "a" or "an" more frequently to highlight individual objects or people.
-this difference in frequency reflects Poe’s lyrical, rhythmic style versus Neruda’s descriptive and introspective tone.
+in contrast, Canto XII from The Heights of Macchu Picchu is more narrative and reflective, so he may use "a" or "an" more frequently to highlight 
+individual objects or people. this difference in frequency reflects the lyrical, rhythmic style of Roe versus the descriptive and introspective tone of Neruda.
 '''

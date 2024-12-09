@@ -1,4 +1,23 @@
-#PROBLEM ONE
+# Sana Anwar
+# CS 100 H FALL 2023
+# Homework 11 - Math & Turtle Modules
+
+"""
+Problem 1: Write code that uses turtle graphics to draw an equilateral triangle, a square and a regular pentagon, each with side length 100.
+
+Problem 2: Write code that uses turtle graphics to draw four concentric circles of radius 50, 100, 150 and 200.
+
+Problem 3: Write code that uses the Python math module to compute and print out the values of:
+    Part A: 100!
+    Part B: the log (base 2) of 1,000,000
+    Part C: the greatest common divisor of 63 and 49
+
+Problem 4: Write a program that asks the user for a color, a line width, a line length and a shape. 
+Assume that the user will specify a shape that is either a line, a triangle, or a square. 
+Use turtle graphics to draw the shape that the user requests of the size, color, line width and line length that the user requests.
+"""
+
+# Problem 1:
 import turtle
 
 def draw_polygon(sides, side_length):
@@ -26,9 +45,7 @@ draw_polygon(5, 100)
 
 turtle.done()
 
-
-
-#PROBLEM TWO
+# Problem 2:
 import turtle
 
 def concentric():
@@ -47,24 +64,21 @@ concentric()
 
 turtle.done()
 
-#PROBLEM THREE
+# Problem 3: Part A
 import math
 
-# PROBLEM 3A
 factorial = math.factorial(100)
 print("100! = ", factorial)
 
-# PROBLEM 3B
+# Problem 3: Part B
 log = math.log2(1000000)
 print("log base 2 of 1,000,000 = ", log)
 
-# PROBLEM 3C
+# Problem 3: Part C
 gcd = math.gcd(63, 49)
 print("greatest common denominator of 63 and 49 = ", gcd)
 
-
-
-# PROBLEM FOUR
+# Problem 4:
 import turtle
 
 def draw_line(length):
